@@ -64,12 +64,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Course.cpp" />
     <ClCompile Include="Semester.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RedBlackTree.cpp" />
     <ClCompile Include="Univ.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Course.h" />
     <ClInclude Include="Semester.h" />
     <ClInclude Include="RedBlackTree.h" />
     <ClInclude Include="Univ.h" />

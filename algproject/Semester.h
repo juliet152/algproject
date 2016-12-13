@@ -6,7 +6,7 @@
 */
 
 #pragma once
-#include "Univ.h"
+#include "Course.h"
 
 typedef struct _node {
 	course* key;
