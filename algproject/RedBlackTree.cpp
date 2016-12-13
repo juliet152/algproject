@@ -367,3 +367,21 @@ RedBlackEntry * RedBlackTree::DeleteNode(RedBlackTreeNode * z){
 	}
 	return returnValue;
 }
+
+RedBlackTreeNode * RedBlackTree::Search(int key)
+{
+	RedBlackTreeNode* t = root->left;
+	while (t != nil) {
+		if (key > t->key) {
+			t = t->right;
+		}
+		else if (key < t->key) {
+			t = t->left;
+		}
+		else {
+			break;
+		}
+	}
+
+	return t;
+}

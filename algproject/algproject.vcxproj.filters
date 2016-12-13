@@ -24,10 +24,13 @@
     <ClCompile Include="Univ.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Semester.cpp">
+    <ClCompile Include="Course.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Course.cpp">
+    <ClCompile Include="UIManger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Submodule.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,10 +41,13 @@
     <ClInclude Include="Univ.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Semester.h">
+    <ClInclude Include="Course.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Course.h">
+    <ClInclude Include="UIManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Submodule.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
