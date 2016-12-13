@@ -5,7 +5,12 @@
 
 int main()
 {
-	student s1;
-	printf("%s",)
+	int n;
+	student s1('m',2013313081,"Jesung Koo","Libearl Arts","English and English Literature");
+	printf("%s", s1.get_name());
+	scanf("%d", &n);
+	s1.set_sem(s1.get_sem(), 1);
+	course 
+	insert_node()
 	return 0;
 }

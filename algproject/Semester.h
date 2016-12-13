@@ -12,3 +12,7 @@ typedef struct _node {
 	course* key;
 	struct _node* next;
 }node;
+
+void init_node(node* n);
+node* insert_node(course* c, node* n);
+node* find_node(course* c, node* n);
