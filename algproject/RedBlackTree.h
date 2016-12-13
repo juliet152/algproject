@@ -28,7 +28,6 @@ public:
 	RedBlackTreeNode(RedBlackEntry *);
 	RedBlackEntry * GetEntry() const;
 	~RedBlackTreeNode();
-protected:
 	RedBlackEntry * storedEntry;
 	int key;
 	int red; /* if red=0 then the node is black */
@@ -47,6 +46,7 @@ public:
 	RedBlackTreeNode * GetPredecessorOf(RedBlackTreeNode *) const;
 	RedBlackTreeNode * GetSuccessorOf(RedBlackTreeNode *) const;
 	RedBlackTreeNode * Search(int key);
+	RedBlackTreeNode * GetRoot() { return root; }
 	void CheckAssumptions() const;
 protected:
 	RedBlackTreeNode * root;

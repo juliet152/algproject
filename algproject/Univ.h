@@ -2,42 +2,57 @@
 #include "Course.h"
 #include "RedBlackTree.h"
 #include "Semester.h"
-
+#include "Course.h"
+#include <string>
+#include <vector>
 #define MAX_CREDIT 140
 
-class student {
+class Student : public RedBlackEntry {
 private:
 	char gender;
 	int ID;
-	char name[30];
-	char coll[30];
-	char maj[30];
-	node* sem[8];
+	int year;
+	int current_sem;
+	int credit;
+	double GPA;
+	string name;
+	string coll;
+	string major;
+	vector<Course> sem[8];
 public:
+	// Virtual function
+	int GetKey() const { return ID; }
+
 	//getter
 	char get_gender() { return gender; } //m,f
 	int get_ID() { return ID; }
-	char* get_name() { return name; }
-	char* get_coll() { return coll; }
-	node** get_sem() { return sem; }
+	string get_name() { return name; }
+	string get_coll() { return coll; }
+	vector<Course>* get_sem() { return sem; }
+	int get_cursem() { return current_sem; }
+	int get_year() { return year; }
+	int get_credit() { return credit; }
+	double get_GPA() { return GPA; }
 	//setter
 	void set_gender(char g) { gender = g; }
 	void set_ID(int id) { ID = id; }
-	void set_name(char* n) { strcpy(name, n); }
-	void set_coll(char* c) { strcpy(coll, c); }
-	void set_sem(node** s,int sem) 
-	{ 
-		node* p;
-		p = (node*)malloc(sizeof(node*));
-		s[sem-1] = p;
-	}
+	void set_name(string n) { name = n; }
+	void set_coll(string c) { coll = c; }
+	void set_credit(int c) { credit = c; }
+	void set_GPA();
 	//constructor
-	student(char g, int id, char* n, char* c, char* m) {
-		gender = g; ID = id; strcpy(name, n); strcpy(coll, c); strcpy(maj, m);
+	Student(char g, int id, int y, int cursem, string n, string c, string m) {
+		gender = g; 
+		ID = id; 
+		year = y;
+		current_sem = cursem;
+		name = n; 
+		coll = c; 
+		major = m;
 	}
-};
 
-class professor {
+	Course* SearchCourse(int id);
+	void Print();
 };
 
 class major {
@@ -51,4 +66,3 @@ private:
 	major* m_list[8];
 public:
 };
-
