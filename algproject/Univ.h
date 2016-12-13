@@ -3,9 +3,11 @@
 #include "RedBlackTree.h"
 #include "Semester.h"
 
+#define MAX_CREDIT 140
+
 class student {
 private:
-	bool gender;
+	char gender;
 	int ID;
 	char name[30];
 	char coll[30];
@@ -13,24 +15,34 @@ private:
 	node* sem[8];
 public:
 	//getter
-	bool get_gender() { return gender; }
+	char get_gender() { return gender; } //m,f
 	int get_ID() { return ID; }
 	char* get_name() { return name; }
 	char* get_coll() { return coll; }
 	node** get_sem() { return sem; }
 	//setter
-	void set_gender(bool g) { gender = g; }
+	void set_gender(char g) { gender = g; }
 	void set_ID(int id) { ID = id; }
 	void set_name(char* n) { strcpy(name, n); }
 	void set_coll(char* c) { strcpy(coll, c); }
-	void set_sem(node** s) { ; }
+	void set_sem(node** s,int sem) 
+	{ 
+		node* p;
+		p = (node*)malloc(sizeof(node*));
+		s[sem-1] = p;
+	}
 	//constructor
-	student(bool g, char id, char* n, char* c, char*m) {
+	student(char g, int id, char* n, char* c, char* m) {
 		gender = g; ID = id; strcpy(name, n); strcpy(coll, c); strcpy(maj, m);
 	}
 };
 
 class professor {
+};
+
+class major {
+private:
+	char name[30];
 };
 
 class college {
@@ -40,7 +52,3 @@ private:
 public:
 };
 
-class major {
-private:
-	char name[30];
-};
